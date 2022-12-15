@@ -8,8 +8,13 @@ const users_Get = (req, res = response) => {
 }
 
 const users_Post = (req, res = response) => {
+
+    const { id, name } = req.body;
+
     res.status(200).json({
-        message: "POST API - Controller"
+        message: "POST API - Controller",
+        id,
+        name
     })
 }
 const users_Put = (req, res = response) => {
